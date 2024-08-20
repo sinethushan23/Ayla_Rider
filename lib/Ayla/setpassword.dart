@@ -1,3 +1,5 @@
+import 'package:ayla/widgets/button_widget.dart';
+import 'package:ayla/widgets/text_form.dart';
 import 'package:flutter/material.dart';
 
 class setpassword extends StatelessWidget {
@@ -25,71 +27,33 @@ class setpassword extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  width: 350,
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Enter your password',
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              width: 20,
-                              color: Color.fromARGB(255, 189, 15, 15),
-                              style: BorderStyle.solid)),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your full name';
-                      }
-                      return null;
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 18,
-                ),
-                //text form
-                Container(
-                  width: 350,
-                  child: TextFormField(
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    decoration: InputDecoration(
-                      labelText: 'Confirm your password',
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              width: 20,
-                              color: Color.fromARGB(255, 0, 0, 0),
-                              style: BorderStyle.solid)),
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your full name';
-                      }
-                      return null;
-                    },
-                  ),
-                ),
 
+                text_form(
+                  formwidth: 350,
+                  labeltext: "Enter your password",
+                  fontsize: 20,
+                ),
+                text_form(
+                  formwidth: 350,
+                  labeltext: "Confirm your password",
+                  fontsize: 20,
+                ),
                 // register button
                 SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
+                button_widget(
+                  //button widget
+                  backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                  foregroundColor: Color.fromARGB(255, 255, 254, 254),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  buttonWidth: 300,
+                  buttonHeight: 50,
+                  buttonText: 'Register',
                   onPressed: () {
-                    Navigator.pushNamed(context, '/otpverification');
+                    Navigator.pushNamed(context, '/signin');
                   },
-                  child: SizedBox(
-                    width: 300,
-                    height: 50,
-                    child: Center(
-                      child: Text('Register'),
-                    ),
-                  ),
                 ),
               ],
             ),

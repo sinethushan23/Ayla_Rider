@@ -200,8 +200,16 @@ class _OTPVerificationState extends State<otpverification> {
                               Text("Didn't receive the code? "),
                               TextButton(
                                   onPressed: () {
-                                    // Add your resend code functionality here
+                                    Navigator.pushNamed(
+                                        context, '/otpverification');
                                   },
+                                  style: TextButton.styleFrom(
+                                    foregroundColor:
+                                        const Color.fromARGB(255, 0, 0, 0),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.zero,
+                                    ),
+                                  ),
                                   child: Text(
                                     "Resend again",
                                     style: TextStyle(
@@ -222,11 +230,14 @@ class _OTPVerificationState extends State<otpverification> {
             padding: EdgeInsets.only(bottom: 20),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
+                foregroundColor: Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: Color.fromARGB(255, 0, 0, 0),
                 textStyle: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 255, 255, 255), // text color
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
                 ),
               ),
               onPressed: () {

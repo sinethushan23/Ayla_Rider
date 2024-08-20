@@ -46,17 +46,21 @@ class custom_page1 extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 20),
             //button
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
-                textStyle: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Color.fromARGB(255, 255, 255, 255), // text color
-                ),
-              ),
               onPressed: () {
                 Navigator.pushNamed(context, '/requestride');
               },
+              //button style
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                textStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                ),
+              ),
               child: SizedBox(
                 width: 300,
                 height: 50,

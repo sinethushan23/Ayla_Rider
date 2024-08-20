@@ -1,5 +1,6 @@
 import 'package:ayla/Ayla/otpverification.dart';
 import 'package:ayla/Ayla/setpassword.dart';
+import 'package:ayla/Ayla/signin.dart';
 import 'package:ayla/Ayla/signup.dart';
 import 'package:ayla/Ayla/welcome.dart';
 import 'package:ayla/Ayla/start.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => Signup(),
         '/otpverification': (context) => otpverification(),
         '/setpassword': (context) => setpassword(),
+        '/signin': (context) => signin(),
       },
     );
   }

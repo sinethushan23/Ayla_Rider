@@ -74,11 +74,14 @@ class custom_page2 extends StatelessWidget {
             //button
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 0, 0, 0),
+                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 0, 0, 0),
                 textStyle: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: const Color.fromARGB(255, 161, 143, 143), // text color
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
                 ),
               ),
               onPressed: onPressed,

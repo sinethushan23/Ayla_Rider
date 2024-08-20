@@ -1,6 +1,8 @@
+import 'package:ayla/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class welcome extends StatelessWidget {
+  // Changed class name to follow naming conventions
   const welcome({super.key});
 
   @override
@@ -59,47 +61,30 @@ class welcome extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min, // add this
                 children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 255, 254, 254),
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(
-                            255, 161, 143, 143), // text color
-                      ),
-                    ),
+                  button_widget(
+                    backgroundColor: const Color.fromARGB(255, 255, 253, 253),
+                    foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    buttonWidth: 300,
+                    buttonHeight: 50,
+                    buttonText: 'Create an Account',
                     onPressed: () {
                       Navigator.pushNamed(context, '/signup');
                     },
-                    child: SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Center(
-                        child: Text('Get Started'),
-                      ),
-                    ),
                   ),
                   SizedBox(height: 10), // add some space between the buttons
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 255, 254, 254),
-                      textStyle: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 255, 255, 255), // text color
-                      ),
-                    ),
+                  button_widget(
+                    backgroundColor: const Color.fromARGB(255, 255, 253, 253),
+                    foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    buttonWidth: 300,
+                    buttonHeight: 50,
+                    buttonText: 'Next',
                     onPressed: () {
                       Navigator.pushNamed(context, '/start');
                     },
-                    child: SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Center(
-                        child: Text('Next'),
-                      ),
-                    ),
                   ),
                 ],
               ),

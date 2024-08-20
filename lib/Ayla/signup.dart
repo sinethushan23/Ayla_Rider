@@ -1,3 +1,4 @@
+import 'package:ayla/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
@@ -111,17 +112,17 @@ class _SignupState extends State<Signup> {
             SizedBox(
               height: 20,
             ),
-            ElevatedButton(
+            button_widget(
+              backgroundColor: Color.fromARGB(255, 0, 0, 0),
+              foregroundColor: Color.fromARGB(255, 255, 254, 254),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              buttonWidth: 300,
+              buttonHeight: 50,
+              buttonText: 'Sign Up',
               onPressed: () {
                 Navigator.pushNamed(context, '/otpverification');
               },
-              child: SizedBox(
-                width: 200,
-                height: 50,
-                child: Center(
-                  child: Text('Sign Up'),
-                ),
-              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -131,8 +132,14 @@ class _SignupState extends State<Signup> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/otpverification');
                   },
+                  style: TextButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero,
+                    ),
+                  ),
                   child: Text(
-                    "sign in",
+                    "Sign in",
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                     ),
