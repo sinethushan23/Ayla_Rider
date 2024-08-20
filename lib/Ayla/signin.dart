@@ -77,7 +77,7 @@ class signin extends StatelessWidget {
                   buttonHeight: 50,
                   buttonText: 'Register',
                   onPressed: () {
-                    Navigator.pushNamed(context, '/otpverification');
+                    Navigator.pushNamed(context, '/home');
                   },
                 ),
                 SizedBox(

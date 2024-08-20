@@ -37,6 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   intl_phone_field: ^3.2.0
+  carousel_slider: ^4.2.0
 
 dev_dependencies:
   flutter_test:
@@ -72,7 +73,11 @@ flutter:
     - lib\assest\taxi and phone.png
     - lib\assest\taxi.png
     - lib\assest\taxi on phone.png
-    -
+    - lib/assest/ad1.jpeg
+    - lib/assest/ad2.jpeg
+    - lib/assest/ad3.jpeg
+
+     
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
