@@ -16,12 +16,12 @@ class home extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Home Page'),
-
-          // my profile action button
           actions: [
-            IconButton(
-              icon: Icon(Icons.person_pin),
-              onPressed: () => Scaffold.of(context).openEndDrawer(),
+            Builder(
+              builder: (context) => IconButton(
+                icon: Icon(Icons.person_pin),
+                onPressed: () => Scaffold.of(context).openEndDrawer(),
+              ),
             ),
           ],
           bottom: TabBar(
@@ -48,27 +48,10 @@ class home extends StatelessWidget {
                 },
               ),
               ListTile(
-                title: Text('Logout'),
-                onTap: () {
-                  // Handle logout tap
-                },
-              ),
-              ListTile(
-                title: Text('Logout'),
-                onTap: () {
-                  // Handle logout tap
-                },
-              ),
-              ListTile(
-                title: Text('Logout'),
-                onTap: () {
-                  // Handle logout tap
-                },
-              ),
-              ListTile(
                 title: Text('About'),
                 onTap: () {
                   // Handle about tap
+                  // add more options
                 },
               ),
             ],
